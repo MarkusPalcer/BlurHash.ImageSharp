@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Blurhash.ImageSharp.Test/Blurhash.ImageSharp.Test.csproj" />
+  <Project Path="Blurhash.ImageSharp/Blurhash.ImageSharp.csproj" />
+</Solution>

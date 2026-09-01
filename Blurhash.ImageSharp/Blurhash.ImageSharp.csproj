@@ -6,8 +6,8 @@
     </ItemGroup>
    
     <PropertyGroup>
-        <!-- This should be in sync with the TFMs of SixLabors.ImageSharp -->
-        <TargetFrameworks>net6.0</TargetFrameworks>
+        <!-- Keep in Sync with the TFM of SixLabors.ImageSharp -->
+        <TargetFramework>net6.0</TargetFramework>
 
         <PackageId>Blurhash.ImageSharp</PackageId>
         <Authors>Markus Palcer</Authors>

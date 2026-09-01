@@ -10,7 +10,6 @@
         <TargetFrameworks>net6.0</TargetFrameworks>
 
         <PackageId>Blurhash.ImageSharp</PackageId>
-        <PackageVersion>@(PackageReference->WithMetadataValue('Identity', 'SixLabors.ImageSharp')->Metadata('Version'))</PackageVersion>
         <Authors>Markus Palcer</Authors>
         <Description>BlurHash is a compact representation of a placeholder for an image.</Description>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -19,4 +18,11 @@
         <PackageProjectUrl>https://github.com/MarkusPalcer/blurhash.net</PackageProjectUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
     </PropertyGroup>
+
+    <Target Name="SetPackageVersion" BeforeTargets="GenerateNuspec;GetPackageVersion;_GetProjectReferenceVersions;GetAssemblyVersion;BeforeCompile">
+        <PropertyGroup>
+            <PackageVersion>@(PackageReference->WithMetadataValue('Identity', 'SixLabors.ImageSharp')->Metadata('Version'))</PackageVersion>
+            <Version>$(PackageVersion)</Version>
+        </PropertyGroup>
+    </Target>
 </Project>

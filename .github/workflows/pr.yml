@@ -14,8 +14,13 @@ jobs:
           dotnet-version: '6.0.x'        
       - name: Restore packages
         run: nuget restore
+      - name: Apply ImageSharp License
+        id: sixlabors
+        run: |
+          echo "${{secrets.IMAGESHARP_LICENSE}}" > sixlabors.lic
+          echo "license=$((Resolve-Path sixlabors.lic).Path)" >> $env:GITHUB_OUTPUT
       - name: Build
-        run: dotnet build
+        run: dotnet build "--property:SixLaborsLicenseFile=${{steps.sixlabors.outputs.license}}"
       - name: Test
-        run: dotnet test --no-build --verbosity normal
+        run: dotnet test --no-build --verbosity normal 
 

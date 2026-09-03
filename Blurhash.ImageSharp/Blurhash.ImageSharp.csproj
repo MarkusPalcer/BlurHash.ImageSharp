@@ -2,12 +2,12 @@
 
     <ItemGroup>
         <PackageReference Include="Blurhash.Core" Version="4.2.1" />
-        <PackageReference Include="SixLabors.ImageSharp" Version="3.1.12" />
+        <PackageReference Include="SixLabors.ImageSharp" Version="4.0.0" />
     </ItemGroup>
    
     <PropertyGroup>
         <!-- Keep in Sync with the TFM of SixLabors.ImageSharp -->
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <LangVersion>14</LangVersion>
         <nullable>enable</nullable>
     </PropertyGroup>

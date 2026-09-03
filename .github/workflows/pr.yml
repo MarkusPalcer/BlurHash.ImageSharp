@@ -15,7 +15,7 @@ jobs:
       - name: Restore packages
         run: nuget restore
       - name: Build
-        run: dotnet build --property:SixLaborsLicenseKey=${{secrets.IMAGESHARP_LICENSE}}
+        run: dotnet build "--property:SixLaborsLicenseKey=${{secrets.IMAGESHARP_LICENSE}}"
       - name: Test
-        run: dotnet test --no-build --verbosity normal --property:SixLaborsLicenseKey=${{secrets.IMAGESHARP_LICENSE}}
+        run: dotnet test --no-build --verbosity normal 
 

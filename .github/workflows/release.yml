@@ -19,7 +19,7 @@ jobs:
       - name: Restore packages
         run: nuget restore
       - name: Build
-        run: dotnet build -c Release --property:SixLaborsLicenseKey=${{secrets.IMAGESHARP_LICENSE}}
+        run: dotnet build -c Release "--property:SixLaborsLicenseKey=${{secrets.IMAGESHARP_LICENSE}}"
       - name: Test
         run: dotnet test --verbosity normal
       - name: Package

@@ -2,7 +2,7 @@
 
     <ItemGroup>
         <PackageReference Include="Blurhash.Core" Version="4.2.1" />
-        <PackageReference Include="SixLabors.ImageSharp" Version="4.0.0" />
+        <PackageReference Include="SixLabors.ImageSharp" Version="4.1.0" />
     </ItemGroup>
    
     <PropertyGroup>
